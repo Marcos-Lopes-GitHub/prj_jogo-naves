@@ -309,6 +309,7 @@ function start(){
     if (energiaAtual==0) {
       $("#energia").css("background-image", "url(imgs/energia0.png)");
       //Game Over
+      gameover();
     }
   }
 
@@ -354,7 +355,7 @@ function start(){
     $("#inimigo2").remove();
     $("#amigo").remove();
 
-    $("fundoGame").append("<div id='fim'></div>");
+    $("#fundoGame").append("<div id='fim'></div>");
 
     $("#fim").html("<h1> Game Over </h1><p>Sua pontuação foi: " + pontos + "</p>" + "<div id='reinicia' onClick = reiniciaJogo()><h3>Jogar novamente?</h3></div>");
 
