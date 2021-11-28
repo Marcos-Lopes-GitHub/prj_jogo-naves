@@ -1,10 +1,6 @@
 function start(){
 
   $("#inicio").hide();
-
-
-
-
   $("#fundoGame").append("<div id=jogador class=anima1></div>");
   $("#fundoGame").append("<div id=inimigo1 class=anima2></div>");
   $("#fundoGame").append("<div id=inimigo2></div>");
@@ -41,9 +37,6 @@ function start(){
   musica.addEventListener("ended", function(){musica.currentTime=0; musica.play();}, false);
   musica.play();
 
-
-
-
   //Verifica se o usuario pressionou uma tecla
   $(document).keydown(function(e){
     jogo.pressionou[e.which] = true;
@@ -54,7 +47,6 @@ function start(){
   });
 
   //Game Loop
-
   jogo.timer = setInterval(loop, 30);
 
   function loop(){
